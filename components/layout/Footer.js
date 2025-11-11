@@ -6,6 +6,7 @@ const Footer = () => {
 
     return (
         <div className='py-10 flex flex-col gap-8'>
+
             <div className='flex justify-between items-center '>
                 <div className='flex flex-col gap-5'>
                     <h1 className='text-prim text-2xl font-semibold'>AHR</h1>
