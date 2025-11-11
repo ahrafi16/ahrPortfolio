@@ -1,10 +1,12 @@
 import ProjectSection from "@/components/sections/ProjectSection"
-import HeroSectioiin from "@/components/sections/HeroSection"
+import HeroSection from "@/components/sections/HeroSection"
+import AboutSection from "@/components/sections/AboutSectioin"
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen items-center justify-center">
-      <HeroSectioiin />
+      <HeroSection />
+      <AboutSection />
       <ProjectSection />
     </div>
   );

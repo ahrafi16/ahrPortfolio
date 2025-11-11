@@ -21,7 +21,7 @@ const Navbar = () => {
         <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-auto">
             <div className="backdrop-blur-xl bg-white/5 border border-white/20 rounded-full shadow-2xl px-8 py-4 flex items-center gap-8">
                 <Link href="/" className="text-xl font-bold text-white tracking-wide whitespace-nowrap">
-                    Anjum<span className="text-blue-400">.</span>
+                    &lt; <span className="text-prim">Anjum</span> /&gt;
                 </Link>
 
                 {/* Desktop Menu */}
