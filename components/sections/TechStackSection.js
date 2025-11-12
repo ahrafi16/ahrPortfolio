@@ -1,7 +1,19 @@
+import Image from "next/image";
 import SectionHeading from "../ui/SectionHeading";
 
 
 const TechStackSection = () => {
+    const languages = [
+        { name: "HTML5", icon: "/html-5.png" },
+        { name: "CSS3", icon: "/css-3.png" },
+        { name: "Tailwind CSS", icon: "/tailwind.png" },
+        { name: "JavaScript", icon: "/js.png" },
+        { name: "React", icon: "/physics.png" },
+        { name: "Next.js", icon: "/nxt.png" },
+        { name: "Python", icon: "/python.png" },
+        { name: "Laravel", icon: "/laravel.png" },
+        { name: "MySQL", icon: "/mysql.png" },
+    ];
     return (
         <div className='flex flex-col gap-5 items-center'>
             <SectionHeading
@@ -9,6 +21,18 @@ const TechStackSection = () => {
                 title="Tech Stack"
                 description="A collection of technologies I work with to build web applications and solve complex problems."
             />
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-9 gap-6 mt-6">
+                {languages.map((lang, index) =>
+                    <div key={index} className="flex flex-col items-center justify-center p-3 md:p-6 bg-prim/40 border border-prim rounded-full shadow-md hover:scale-105 cursor-grabbing transition duration-300">
+                        <Image
+                            src={lang.icon}
+                            width={500}
+                            height={500}
+                            alt="Picture of the author"
+                        />
+                    </div>
+                )}
+            </div>
         </div>
     );
 };
