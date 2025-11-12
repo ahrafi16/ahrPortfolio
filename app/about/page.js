@@ -1,5 +1,6 @@
 import SectionHeading from "@/components/ui/SectionHeading";
 import Image from "next/image";
+import { User, GraduationCap, Code, BookOpen } from 'lucide-react';
 
 
 const page = () => {
@@ -7,7 +8,7 @@ const page = () => {
         {
             key: "personalInterests",
             title: "Personal Interests",
-            icon: "Globe", // Example: from lucide-react
+            icon: <User />,
             items: [
                 "Web development projects",
                 "Exploring new technologies",
@@ -18,7 +19,7 @@ const page = () => {
         {
             key: "codingPhilosophy",
             title: "Coding Philosophy",
-            icon: "Code2",
+            icon: <Code />,
             items: [
                 "Clean and maintainable code",
                 "Focus on user experience",
@@ -29,7 +30,7 @@ const page = () => {
         {
             key: "educationJourney",
             title: "Education Journey",
-            icon: "GraduationCap",
+            icon: <GraduationCap />,
             items: [
                 "Computer Science fundamentals",
                 "Data structures and algorithms",
@@ -40,7 +41,7 @@ const page = () => {
         {
             key: "futureGoals",
             title: "Future Goals",
-            icon: "Rocket",
+            icon: <BookOpen />,
             items: [
                 "Mastering advanced AI techniques",
                 "Building impactful web applications",
@@ -51,7 +52,7 @@ const page = () => {
     ];
 
     return (
-        <div className="min-h-screen pt-40     ">
+        <div className="min-h-screen pt-40">
             <SectionHeading
                 badge="About Me"
                 title="Know About Me"
@@ -85,18 +86,16 @@ const page = () => {
             <SectionHeading
                 title="More About Me"
             />
-            <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="grid grid-cols-1 my-20 gap-8 md:grid-cols-2">
                 {
                     aboutData.map((section, index) => (
-                        <div key={index}>
-                            <div className="flex">
-                                <Image
-                                    src="/profile.png"
-                                    width={500}
-                                    height={500}
-                                    alt="Picture of the author"
-                                />
-                                <h2>{section.title}</h2>
+                        <div className="bg-[#27293a] p-5 border border-gray-600 rounded-xl transition duration-300 hover:scale-105" key={index}>
+                            <div className="flex gap-5 items-center">
+                                <span className='flex  p-3 rounded-lg text-purple-400 bg-purple-400/10'>
+                                    {section.icon}
+                                </span>
+
+                                <h2 className="text-xl font-semibold">{section.title}</h2>
                             </div>
                             <ul className="list-disc list-inside mt-4 text-second">
                                 {section.items.map((item, idx) => (
