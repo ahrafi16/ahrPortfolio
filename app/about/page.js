@@ -3,6 +3,53 @@ import Image from "next/image";
 
 
 const page = () => {
+    const aboutData = [
+        {
+            key: "personalInterests",
+            title: "Personal Interests",
+            icon: "Globe", // Example: from lucide-react
+            items: [
+                "Web development projects",
+                "Exploring new technologies",
+                "Solving algorithmic challenges",
+                "Open-source contributions"
+            ]
+        },
+        {
+            key: "codingPhilosophy",
+            title: "Coding Philosophy",
+            icon: "Code2",
+            items: [
+                "Clean and maintainable code",
+                "Focus on user experience",
+                "Continuous learning and improvement",
+                "Building with scalability in mind"
+            ]
+        },
+        {
+            key: "educationJourney",
+            title: "Education Journey",
+            icon: "GraduationCap",
+            items: [
+                "Computer Science fundamentals",
+                "Data structures and algorithms",
+                "Machine learning and AI",
+                "Self-taught web development"
+            ]
+        },
+        {
+            key: "futureGoals",
+            title: "Future Goals",
+            icon: "Rocket",
+            items: [
+                "Mastering advanced AI techniques",
+                "Building impactful web applications",
+                "Contributing to open-source projects",
+                "Hunting a challenging role in tech industry"
+            ]
+        }
+    ];
+
     return (
         <div className="min-h-screen pt-40     ">
             <SectionHeading
@@ -10,18 +57,56 @@ const page = () => {
                 title="Know About Me"
                 description="A Computer Science student with a strong focus on both Frontend and Backend development. I&apos;m passionate about turning ideas into modern, dynamic, and user-focused web applications"
             />
-            <div>
-                <div>
+            <div className="flex items-center my-20 gap-10">
+                <div className="bg-[#27293a] flex-1 flex items-center justify-center p-9 border border-gray-600 rounded-xl">
                     <Image
-                        src="/physics.png"
+                        className="rounded-lg"
+                        src="/sylhet_ahr.jpg"
                         width={500}
                         height={500}
                         alt="ANJUM HOSSAIN RAFI"
                     />
                 </div>
-                <div>
+                <div className="flex-1">
+                    <h2 className="text-2xl font-semibold">Who am I?</h2>
+                    <p className="text-justify leading-7 mt-5 text-second">
+                        I&apos;m <span className="text-prim">Anjum Hossain</span> , a Computer Science student specializing in Web Development.
+                        My journey in programming began with a deep curiosity for solving complex problems, which inspired me to explore a variety of programming languages and modern technologies. <br /> <br /> Over time, I&apos;ve developed a strong passion for building web applications that are not only functional and efficient but also intuitive and user-centered.
+                        <br /> <br />
+                        I believe in continuous learning and constantly strive to stay updated with the latest trends and advancements in technology.
 
+                        When I&apos;m not coding, you&apos;ll often find me exploring new tech tools, playing cricket, watching movies, or enjoying video games.
+                    </p>
                 </div>
+            </div>
+
+
+
+            <SectionHeading
+                title="More About Me"
+            />
+            <div className="grid grid-cols-1 md:grid-cols-2">
+                {
+                    aboutData.map((section, index) => (
+                        <div key={index}>
+                            <div className="flex">
+                                <Image
+                                    src="/profile.png"
+                                    width={500}
+                                    height={500}
+                                    alt="Picture of the author"
+                                />
+                                <h2>{section.title}</h2>
+                            </div>
+                            <ul className="list-disc list-inside mt-4 text-second">
+                                {section.items.map((item, idx) => (
+                                    <li key={idx} className="mb-2">{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )
+                    )
+                }
             </div>
         </div>
     );
