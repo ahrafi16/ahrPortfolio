@@ -2,6 +2,7 @@
 import { Code, GraduationCap, Briefcase, ChevronRight } from 'lucide-react';
 import Button from '../ui/Button';
 import SectionHeading from '../ui/SectionHeading';
+import Link from 'next/link';
 
 const AboutSectioin = () => {
     return (
@@ -38,7 +39,10 @@ const AboutSectioin = () => {
                     <p className='text-second'>Experienced in building fast, modern, and responsive web applications using React.js, Next.js, and Laravel.</p>
                 </div>
             </div>
-            <Button className='flex items-center gap-1 my-5'>More About Me <ChevronRight /></Button>
+            <Link href="/about">
+                <Button className='flex items-center gap-1 my-5'>More About Me <ChevronRight /></Button>
+            </Link>
+
         </div>
     );
 };

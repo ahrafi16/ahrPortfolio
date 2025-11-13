@@ -15,7 +15,7 @@ const TechStackSection = () => {
         { name: "MySQL", icon: "/mysql.png" },
     ];
     return (
-        <div className='flex flex-col gap-5 items-center'>
+        <div className='flex flex-col gap-5 my-20 items-center'>
             <SectionHeading
                 badge="Skills"
                 title="Tech Stack"
