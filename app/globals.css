@@ -28,3 +28,72 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+/* Add this CSS to your stylesheet */
+
+.liquid-glass {
+  /* Glassmorphism effect */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  /* Water drop shine effect */
+  box-shadow:
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.1);
+
+  /* Subtle gradient for depth */
+  background-image: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.05) 100%);
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect - more glassy and wet look */
+.liquid-glass:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 12px 40px 0 rgba(31, 38, 135, 0.45),
+    inset 0 2px 2px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 2px rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Water drop shimmer effect */
+.liquid-glass::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 70%);
+  transform: rotate(45deg);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+/* Active/Click effect */
+.liquid-glass:active {
+  transform: scale(0.98);
+  box-shadow:
+    0 4px 16px 0 rgba(31, 38, 135, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
