@@ -5,9 +5,11 @@ import { ChevronRight } from 'lucide-react';
 import Link from "next/link";
 
 
+
 const HeroSectioiin = () => {
     return (
         <div className="flex justify-between min-h-screen items-center">
+          
             <div className="flex flex-col gap-5 flex-1">
                 <p className="text-prim">Welcome to my portfolio</p>
                 <h1 className="text-5xl font-bold">Hi, I&apos;m <br /> <span className="bg-linear-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Anjum Hossain</span>  </h1>

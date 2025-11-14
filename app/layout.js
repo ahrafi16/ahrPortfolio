@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Montserrat } from 'next/font/google';
+import { SparklesCore } from "@/components/ui/sparkles";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +30,18 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased ${montserrat.className}`}>
         <div className="min-h-screen w-full bg-slate-950">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-size-[14px_24px]"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-size-[54px_54px]"></div>
+
+          <SparklesCore
+            id="tsparticlesfullpage"
+            background="transparent"
+            minSize={0.6}
+            maxSize={1.4}
+            speed={0.1}
+            particleDensity={20}
+            className="w-full h-full absolute inset-0 pointer-events-none"
+            particleColor="#FFFFFF"
+          />
 
           <div className="relative z-10 px-30 mx-auto">
             <Navbar />
