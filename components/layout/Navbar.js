@@ -4,9 +4,12 @@ import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
+
 
     const navItems = [
         { name: "Home", link: "/" },
@@ -26,15 +29,18 @@ const Navbar = () => {
 
                 {/* Desktop Menu */}
                 <nav className="hidden md:flex items-center gap-6">
-                    {navItems.map((item, index) => (
-                        <Link
-                            key={index}
-                            href={item.link}
-                            className="text-white/70 hover:text-white transition duration-200 font-medium text-sm whitespace-nowrap px-4 py-2 rounded-full hover:bg-white/10"
-                        >
-                            {item.name}
-                        </Link>
-                    ))}
+                    {navItems.map((item, index) => {
+                        const isActive = pathname === item.link;
+                        return (
+                            <Link
+                                key={index}
+                                href={item.link}
+                                className={`transition duration-200 font-medium text-sm whitespace-nowrap px-4 py-2 rounded-full hover:bg-white/10 ${isActive ? "bg-white/10" : "text-white/70 hover:text-white hover:bg-white/10"}`}
+                            >
+                                {item.name}
+                            </Link>
+                        );
+                    })}
                 </nav>
 
                 {/* Mobile Menu Button */}

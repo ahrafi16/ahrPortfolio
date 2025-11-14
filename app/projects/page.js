@@ -6,6 +6,7 @@ import ProjectCard from "@/components/ui/ProjectCard";
 
 
 const page = () => {
+    
     return (
         <div className="min-h-screen pt-40">
             <SectionHeading

@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
             particleColor="#FFFFFF"
           />
 
-          <div className="relative z-10 px-30 mx-auto">
+          <div className="relative z-10 px-5 md:px-30 mx-auto">
             <Navbar />
             <main>
 
