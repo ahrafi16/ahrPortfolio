@@ -15,7 +15,7 @@ const ProjectCard = ({ project }) => (
         <div className="space-y-4">
             <h2 className="text-2xl font-semibold">{project.title}</h2>
             <p className="text-second">{project.description}</p>
-            <div className="flex gap-2 items-center">
+            <div className="flex flex-wrap gap-2 items-center">
                 {
                     project.technologies.map((tech) => (
                         <span className="bg-slate-900 py-1 px-2 rounded-4xl text-sm" key={tech}>{tech}</span>

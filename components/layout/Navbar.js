@@ -21,10 +21,10 @@ const Navbar = () => {
     ];
 
     return (
-        <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-auto">
-            <div className="backdrop-blur-xl bg-white/5 border border-white/20 rounded-full shadow-2xl px-8 py-4 flex items-center gap-8">
+        <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full px-5 md:w-auto">
+            <div className="backdrop-blur-xl bg-white/5 border border-white/20 rounded-full shadow-2xl px-8 py-4 flex justify-between items-center gap-8">
                 <Link href="/" className="text-xl font-bold text-white tracking-wide whitespace-nowrap">
-                    &lt; <span className="text-prim">Anjum</span> /&gt;
+                    &lt; <span className="text-prim hover:text-white transition">Anjum</span> /&gt;
                 </Link>
 
                 {/* Desktop Menu */}
@@ -61,14 +61,14 @@ const Navbar = () => {
                             animate={{ opacity: 0.5 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setIsOpen(false)}
-                            className="fixed inset-0 bg-black z-40"
+                            className="fixed inset-0 z-40"
                         />
                         <motion.nav
                             initial={{ x: "100%" }}
                             animate={{ x: 0 }}
                             exit={{ x: "100%" }}
                             transition={{ type: "spring", stiffness: 70, damping: 15 }}
-                            className="fixed top-0 right-0 h-full w-3/4 max-w-sm bg-gray-900/95 backdrop-blur-xl border-l border-white/10 z-50 p-8 flex flex-col items-start space-y-6 rounded-l-3xl"
+                            className="fixed top-0 right-0 h-auto w-2/4 max-w-sm bg-white/5 backdrop-blur-xl  border-l border-white/10 z-50 p-8 flex flex-col items-start space-y-6 rounded-l-3xl"
                         >
                             <button
                                 onClick={() => setIsOpen(false)}
@@ -82,7 +82,7 @@ const Navbar = () => {
                                     key={index}
                                     href={item.link}
                                     onClick={() => setIsOpen(false)}
-                                    className="text-white/80 text-lg font-medium hover:text-blue-400 transition duration-200"
+                                    className="text-white/80 text-lg font-medium hover:text-prim transition duration-200"
                                 >
                                     {item.name}
                                 </Link>

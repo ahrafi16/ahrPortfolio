@@ -1,17 +1,17 @@
 "use client";
-// import Image from "next/image";
 import Button from "../ui/Button";
 import { ChevronRight } from 'lucide-react';
 import Link from "next/link";
-// import developerAnimation from "/developer.json";
 import Lottie from "lottie-react";
 import { useEffect, useState } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 
 
 
 const HeroSectioiin = () => {
     const [animationData, setAnimationData] = useState(null);
+    const text = "Welcome to my portfolio";
     useEffect(() => {
         fetch("/developer.json")
             .then((response) => response.json())
@@ -21,10 +21,25 @@ const HeroSectioiin = () => {
     return (
         <div className="flex flex-col md:flex-row justify-between  pt-40 md:pt-0 min-h-screen items-center">
 
-            <div className="flex flex-col gap-10 md:gap-5 flex-1">
-                <p className="text-prim">Welcome to my portfolio</p>
+            <div className="flex flex-col gap-5 flex-1">
+                <p className="text-prim text-glow">Welcome to my portfolio</p>
                 <h1 className="text-5xl font-bold">Hi, I&apos;m <br /> <span className="bg-linear-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Anjum Hossain</span>  </h1>
-                <h3 className="text-2xl">Web Developer</h3>
+                {/* <h3 className="text-2xl">Web Developer</h3> */}
+                <TypeAnimation
+                    sequence={[
+                        'Web Developer',
+                        2000,
+                        'Tech Enthusiast',
+                        2000,
+                        'Lifelong Learner',
+                        2000,
+                    ]}
+                    wrapper="h3"
+                    speed={50}
+                    className="text-2xl"
+                    repeat={Infinity}
+                    deletionSpeed={60}
+                />
                 <p className="text-second">
                     Passionate software developer with expertise in Python, JavaScript, and C. Skilled in building modern, high-performance web applications using React.js, Next.js, and Laravel for the backend, with a strong focus on creating exceptional frontend experiences.
                 </p>

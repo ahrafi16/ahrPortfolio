@@ -38,7 +38,7 @@ const page = () => {
                             </span>
                             <span>
                                 <p className="font-semibold">Email</p>
-                                <p className="text-sm text-second">anjumhossainrafi16@gmail.com</p>
+                                <p className="text-sm text-second break-all">anjumhossainrafi16@gmail.com</p>
                             </span>
                         </div>
 
@@ -57,16 +57,16 @@ const page = () => {
                         <div className="mt-6">
                             <p className="text-prim font-semibold">Social Media</p>
                             <div className="flex items-center gap-4 mt-2 text-gray-400">
-                                <a className="bg-second/10 p-2 rounded-full hover:text-prim transition-colors" href="#" target="_blank">
+                                <a className="bg-second/10 p-2 rounded-full hover:text-prim transition-colors" href="https://github.com/ahrafi16" target="_blank">
                                     <Github />
                                 </a>
-                                <a className="bg-second/10 p-2 rounded-full hover:text-prim transition-colors" href="#" target="_blank">
+                                <a className="bg-second/10 p-2 rounded-full hover:text-prim transition-colors" href="https://www.linkedin.com/in/anjum-hossain-519a192b2/" target="_blank">
                                     <Linkedin />
                                 </a>
-                                <a className="bg-second/10 p-2 rounded-full hover:text-prim transition-colors" href="#" target="_blank">
+                                <a className="bg-second/10 p-2 rounded-full hover:text-prim transition-colors" href="https://www.instagram.com/rafianjumhossain/" target="_blank">
                                     <Instagram />
                                 </a>
-                                <a className="bg-second/10 p-2 rounded-full hover:text-prim transition-colors" href="#">
+                                <a className="bg-second/10 p-2 rounded-full hover:text-prim transition-colors" href="https://www.facebook.com/anjumhossain.rafi/" target="_blank">
                                     <Facebook />
                                 </a>
                             </div>

@@ -16,16 +16,16 @@ const Footer = () => {
                     <p className='text-second'>Connect with me</p>
                     <div>
                         <div className='flex items-center gap-4 text-gray-400'>
-                            <a className='bg-slate-900 p-2 rounded-full hover:text-prim transition-colors' href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+                            <a className='bg-slate-900 p-2 rounded-full hover:text-prim transition-colors' href="https://github.com/ahrafi16" target="_blank" rel="noopener noreferrer">
                                 <Github />
                             </a>
-                            <a className='bg-slate-900 p-2 rounded-full hover:text-prim transition-colors' href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+                            <a className='bg-slate-900 p-2 rounded-full hover:text-prim transition-colors' href="https://www.linkedin.com/in/anjum-hossain-519a192b2/" target="_blank" rel="noopener noreferrer">
                                 <Linkedin />
                             </a>
-                            <a className='bg-slate-900 p-2 rounded-full hover:text-prim transition-colors' href="https://instagram.com/your-username" target="_blank" rel="noopener noreferrer">
+                            <a className='bg-slate-900 p-2 rounded-full hover:text-prim transition-colors' href="https://www.instagram.com/rafianjumhossain/" target="_blank" rel="noopener noreferrer">
                                 <Instagram />
                             </a>
-                            <a className='bg-slate-900 p-2 rounded-full hover:text-prim transition-colors' href="mailto:your-email@example.com">
+                            <a className='bg-slate-900 p-2 rounded-full hover:text-prim transition-colors' href="mailto:anjumhossainrafi16@gmail.com" target="_blank" rel="noopener noreferrer">
                                 <Mail />
                             </a>
                         </div>

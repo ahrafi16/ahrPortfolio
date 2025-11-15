@@ -58,7 +58,7 @@ const page = () => {
                 title="Know About Me"
                 description="A Computer Science student with a strong focus on both Frontend and Backend development. I&apos;m passionate about turning ideas into modern, dynamic, and user-focused web applications"
             />
-            <div className="flex items-center my-20 gap-10">
+            <div className="flex flex-col md:flex-row items-center my-20 gap-10">
                 <div className="bg-[#27293a] flex-1 flex items-center justify-center p-9 border border-gray-600 rounded-xl">
                     <Image
                         className="rounded-lg"
