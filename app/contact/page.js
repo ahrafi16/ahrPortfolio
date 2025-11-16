@@ -93,7 +93,7 @@ const page = () => {
                                 <User className="text-gray-400" size={18} />
                                 <input
                                     type="text"
-                                    placeholder="John Doe"
+                                    placeholder="Mr. Rafi"
                                     className="w-full bg-transparent outline-none text-gray-300"
                                 />
                             </div>

@@ -4,15 +4,15 @@ import SectionHeading from "../ui/SectionHeading";
 
 const TechStackSection = () => {
     const languages = [
-        { name: "HTML5", icon: "/html-5.png" },
-        { name: "CSS3", icon: "/css-3.png" },
-        { name: "Tailwind CSS", icon: "/tailwind.svg" },
-        { name: "JavaScript", icon: "/js.png" },
-        { name: "React", icon: "/physics.png" },
-        { name: "Next.js", icon: "/nextjs.svg" },
-        { name: "Python", icon: "/python.png" },
-        { name: "Laravel", icon: "/laravel.png" },
-        { name: "MySQL", icon: "/mysql.svg" },
+        { name: "HTML5", icon: "/html.svg" },
+        { name: "CSS3", icon: "/css.svg" },
+        { name: "Tailwind CSS", icon: "/tailwindCss.svg" },
+        { name: "JavaScript", icon: "/js.svg" },
+        { name: "React", icon: "/react.svg" },
+        { name: "Next.js", icon: "/next.svg" },
+        { name: "Python", icon: "/python.svg" },
+        { name: "Laravel", icon: "/laravel.svg" },
+        { name: "MySQL", icon: "/sql.svg" },
     ];
     return (
         <div className='flex flex-col gap-5 my-20 items-center'>
@@ -25,7 +25,7 @@ const TechStackSection = () => {
                 {languages.map((lang, index) =>
                     <div
                         key={index}
-                        className="flex flex-col items-center justify-center p-5 md:p-6 bg-white/20 border border-prim/70 rounded-full shadow-md hover:scale-105 cursor-grabbing transition duration-300">
+                        className="flex flex-col items-center justify-center p-4 md:p-6 bg-second rounded-3xl shadow-md hover:scale-105 cursor-grabbing transition duration-300">
                         <Image
                             src={lang.icon}
                             width={500}

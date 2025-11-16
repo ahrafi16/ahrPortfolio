@@ -9,6 +9,15 @@ export const projects = [
         liveDemo: "https://vermillion-entremet-c7f3c5.netlify.app/",
     },
     {
+        title: "AdoptBuddy",
+        description:
+            "A web application that connects potential pet adopters with animals in need of a loving home, built using React, Tailwind CSS,Inertia.js, Laravel.",
+        technologies: ["React", "Inertia.js", "Laravel"],
+        photo: ["/p5.png", "/p1_mobile.png"],
+        githubLink: "https://github.com/hafizflow/AdoptBuddy",
+        liveDemo: "",
+    },
+    {
         title: "Frikly Professional",
         description:
             "Frikly is a one-stop destination for everthing a home needs and assists anyone, anywhere, to get the feel just like your home.",
