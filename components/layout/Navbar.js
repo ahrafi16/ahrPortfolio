@@ -10,13 +10,12 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
 
-
     const navItems = [
         { name: "Home", link: "/" },
         { name: "About", link: "/about" },
         { name: "Academics", link: "/academics" },
         { name: "Projects", link: "/projects" },
-        { name: "Resume", link: "/resume" },
+        { name: "Resume", link: "/CV of ANJUM HOSSAIN.pdf", external: true },
         { name: "Contact", link: "/contact" },
     ];
 
@@ -31,6 +30,22 @@ const Navbar = () => {
                 <nav className="hidden md:flex items-center gap-6">
                     {navItems.map((item, index) => {
                         const isActive = pathname === item.link;
+                        
+                        // Handle external links (like PDF resume)
+                        if (item.external) {
+                            return (
+                                <a
+                                    key={index}
+                                    href={item.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="transition duration-200 font-medium text-sm whitespace-nowrap px-4 py-2 rounded-full text-white/70 hover:text-white hover:bg-white/10"
+                                >
+                                    {item.name}
+                                </a>
+                            );
+                        }
+                        
                         return (
                             <Link
                                 key={index}
@@ -77,16 +92,34 @@ const Navbar = () => {
                                 <X size={28} />
                             </button>
 
-                            {navItems.map((item, index) => (
-                                <Link
-                                    key={index}
-                                    href={item.link}
-                                    onClick={() => setIsOpen(false)}
-                                    className="text-white/80 text-lg font-medium hover:text-prim transition duration-200"
-                                >
-                                    {item.name}
-                                </Link>
-                            ))}
+                            {navItems.map((item, index) => {
+                                // Handle external links in mobile menu
+                                if (item.external) {
+                                    return (
+                                        <a
+                                            key={index}
+                                            href={item.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            onClick={() => setIsOpen(false)}
+                                            className="text-white/80 text-lg font-medium hover:text-prim transition duration-200"
+                                        >
+                                            {item.name}
+                                        </a>
+                                    );
+                                }
+                                
+                                return (
+                                    <Link
+                                        key={index}
+                                        href={item.link}
+                                        onClick={() => setIsOpen(false)}
+                                        className="text-white/80 text-lg font-medium hover:text-prim transition duration-200"
+                                    >
+                                        {item.name}
+                                    </Link>
+                                );
+                            })}
                         </motion.nav>
                     </>
                 )}

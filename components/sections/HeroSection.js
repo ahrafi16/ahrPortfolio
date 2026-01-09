@@ -11,7 +11,6 @@ import { TypeAnimation } from "react-type-animation";
 
 const HeroSectioiin = () => {
     const [animationData, setAnimationData] = useState(null);
-    const text = "Welcome to my portfolio";
     useEffect(() => {
         fetch("/developer.json")
             .then((response) => response.json())
