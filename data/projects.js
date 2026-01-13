@@ -1,5 +1,14 @@
 export const projects = [
     {
+        title: "Espresso Emporium (Coffee Management Store)",
+        description:
+            "A full-stack coffee store application with user authentication, coffee management (CRUD operations), and user management features built with React, Node.js, MongoDB, and Firebase.",
+        technologies: ["React", "Node.js", "Express", "MongoDB", "Firebase", "React Router"],
+        photo: ["/p6.png", "/p1.png"],
+        githubLink: "https://github.com/ahrafi16/coffee-store-client",
+        liveDemo: "https://coffee-store-app-b9961.web.app/",
+    },
+    {
         title: "Exclusive",
         description:
             "A modern e-commerce front-end project built with React, Firebase, and Tailwind CSS to showcase my projects and skills.",
