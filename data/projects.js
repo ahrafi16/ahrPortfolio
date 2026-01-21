@@ -1,5 +1,14 @@
 export const projects = [
     {
+        title: "CarvanaX",
+        description:
+            "A full-stack car dealership application with admin authentication, car inventory management (CRUD operations), and dynamic car listing features built with React, Node.js, MongoDB, and Vercel deployment.",
+        technologies: ["React", "Node.js", "Express", "MongoDB", "React Router", "Tailwind CSS"],
+        photo: ["/p7.png", "/p7.png"],
+        githubLink: "https://github.com/ahrafi16/CarvanaX-client",
+        liveDemo: "https://carvanax-client.netlify.app/",
+    },
+    {
         title: "Espresso Emporium (Coffee Management Store)",
         description:
             "A full-stack coffee store application with user authentication, coffee management (CRUD operations), and user management features built with React, Node.js, MongoDB, and Firebase.",
