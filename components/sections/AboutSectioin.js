@@ -10,7 +10,7 @@ const AboutSectioin = () => {
             <SectionHeading
                 badge="About Me"
                 title="Who I Am"
-                description="A Computer Science student with a strong focus on both Frontend and Backend development. I&apos;m passionate about turning ideas into modern, dynamic, and user-focused web applications"
+                description="A Computer Science graduated student with a strong focus on both Frontend and Backend development. I&apos;m passionate about turning ideas into modern, dynamic, and user-focused web applications"
             />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-5">
                 <div className='bg-[#27293a] flex flex-col items-center gap-5 p-7 border border-gray-600 rounded-xl'>

@@ -7,12 +7,17 @@ const TechStackSection = () => {
         { name: "HTML5", icon: "/html.svg" },
         { name: "CSS3", icon: "/css.svg" },
         { name: "Tailwind CSS", icon: "/tailwindCss.svg" },
-        { name: "JavaScript", icon: "/js.svg" },
+        { name: "JavaScript", icon: "/javascript.png" },
         { name: "React", icon: "/react.svg" },
         { name: "Next.js", icon: "/next.svg" },
-        { name: "Python", icon: "/python.svg" },
-        { name: "Laravel", icon: "/laravel.svg" },
+        { name: "Node,js", icon: "/js.svg" },
+        { name: "Express", icon: "/ex.png" },
+        { name: "MongoDB", icon: "/MongoDB.svg" },
         { name: "MySQL", icon: "/sql.svg" },
+        { name: "Python", icon: "/python.svg" },
+        { name: "Postman", icon: "/postman.svg" },
+        { name: "github", icon: "/github.svg" },
+        { name: "Firebase", icon: "/firebase.svg" },
     ];
     return (
         <div className='flex flex-col gap-5 my-20 items-center'>

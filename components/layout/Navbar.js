@@ -15,7 +15,7 @@ const Navbar = () => {
         { name: "About", link: "/about" },
         { name: "Academics", link: "/academics" },
         { name: "Projects", link: "/projects" },
-        { name: "Resume", link: "/CV of ANJUM HOSSAIN.pdf", external: true },
+        { name: "Resume", link: "/ANUM_HOSSAIN_RESUME.pdf", external: true },
         { name: "Contact", link: "/contact" },
     ];
 

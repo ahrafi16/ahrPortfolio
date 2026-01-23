@@ -5,6 +5,7 @@ import Link from "next/link";
 import Lottie from "lottie-react";
 import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 
 
 
@@ -22,7 +23,15 @@ const HeroSectioiin = () => {
 
             <div className="flex flex-col gap-5 flex-1">
                 <p className="text-prim text-glow">Welcome to my portfolio</p>
-                <h1 className="text-5xl font-bold">Hi, I&apos;m <br /> <span className="bg-linear-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Anjum Hossain</span>  </h1>
+                <h1 className="text-5xl font-bold">Hi, I&apos;m <br />
+                    <motion.span
+                        animate={
+                            { color: ["#6366F1", "#EC4899", "#F59E0B", "#10B981", "#3B82F6"] }}
+                        transition={{ duration: 5, repeat: Infinity }}
+                        className="bg-linear-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                        Anjum Hossain
+                    </motion.span>
+                </h1>
                 {/* <h3 className="text-2xl">Web Developer</h3> */}
                 <TypeAnimation
                     sequence={[
@@ -40,7 +49,7 @@ const HeroSectioiin = () => {
                     deletionSpeed={60}
                 />
                 <p className="text-second">
-                    Passionate software developer with expertise in Python, JavaScript, and C. Skilled in building modern, high-performance web applications using React.js, Next.js, and Laravel for the backend, with a strong focus on creating exceptional frontend experiences.
+                    Passionate software developer with expertise in JavaScript(ES6+), Python and C. Skilled in building modern, high-performance web applications using React.js, Next.js, and Node.js, Express.js for the backend, with a strong focus on creating exceptional frontend experiences.
                 </p>
                 <div className="flex gap-5">
                     <Link href="/contact">
