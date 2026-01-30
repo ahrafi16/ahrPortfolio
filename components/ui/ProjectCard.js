@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Github, SquareArrowOutUpRight } from "lucide-react";
 
 const ProjectCard = ({ project }) => (
-    <div className="bg-[#27293a] p-9 border border-gray-600 rounded-xl space-y-5 hover:-translate-y-3 transition-all duration-500 hover:cursor-grab">
+    <div className="bg-[#27293a] flex flex-col flex-wrap p-9 border border-gray-600 rounded-xl space-y-5  hover:-translate-y-3 transition-all duration-500 hover:cursor-grab">
         <div className="flex justify-center items-center">
             <Image
                 className="rounded-lg hover:scale-105 transition-transform duration-300"
@@ -12,7 +12,7 @@ const ProjectCard = ({ project }) => (
                 alt="ANJUM HOSSAIN RAFI"
             />
         </div>
-        <div className="space-y-4">
+        <div className="space-y-4 flex flex-col grow">
             <h2 className="text-2xl font-semibold">{project.title}</h2>
             <p className="text-second">{project.description}</p>
             <div className="flex flex-wrap gap-2 items-center">
@@ -22,7 +22,7 @@ const ProjectCard = ({ project }) => (
                     ))
                 }
             </div>
-            <div className="flex gap-2 mt-4">
+            <div className="flex gap-2 mt-auto">
                 <a
                     href={project.githubLink}
                     target="_blank"

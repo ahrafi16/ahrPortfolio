@@ -9,7 +9,7 @@ export const projects = [
         liveDemo: "https://carvanax-client.netlify.app/",
     },
     {
-        title: "Espresso Emporium (Coffee Management Store)",
+        title: "Espresso Emporium",
         description:
             "A full-stack coffee store application with user authentication, coffee management (CRUD operations), and user management features built with React, Node.js, MongoDB, and Firebase.",
         technologies: ["React", "Node.js", "Express", "MongoDB", "Firebase", "React Router"],
