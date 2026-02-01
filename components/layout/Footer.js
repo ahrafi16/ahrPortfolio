@@ -1,5 +1,6 @@
 import React from 'react';
 import { Github, Linkedin, Instagram, Mail } from 'lucide-react';
+import Link from 'next/link';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -9,7 +10,9 @@ const Footer = () => {
 
             <div className='flex flex-col md:flex-row justify-between gap-5 items-center '>
                 <div className='flex flex-col gap-5'>
-                    <h1 className='text-prim text-2xl font-semibold'>AHR</h1>
+                    <Link href="/">
+                        <h1 className='text-prim text-2xl font-semibold'>AHR</h1>
+                    </Link>
                     <p className='text-second max-w-2xl'>Crafting innovative digital solutions that combine elegant, efficient code with seamless and unforgettable user experiences.</p>
                 </div>
                 <div className='flex flex-col items-center md:items-end gap-5'>

@@ -26,7 +26,7 @@ const TechStackSection = () => {
                 title="Tech Stack"
                 description="A collection of technologies I work with to build web applications and solve complex problems."
             />
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-9 gap-6 mt-6">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 mt-6">
                 {languages.map((lang, index) =>
                     <div
                         key={index}
