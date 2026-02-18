@@ -1,5 +1,14 @@
 export const projects = [
     {
+        title: "CareerBridge",
+        description:
+            "A full-stack job portal system where admins can post jobs, manage applications, and update applicant status, while users can sign up, log in, and apply for jobs. Built with React, Node.js, Express, MongoDB, Firebase, JWT, and Tailwind CSS with a fully responsive design.",
+        technologies: ["React", "Node.js", "Express", "MongoDB", "Firebase", "JWT", "Tailwind CSS"],
+        photo: ["/p8.png", "/p8.png"],
+        githubLink: "https://github.com/ahrafi16/career-bridge-client",
+        liveDemo: "https://career-bridge-23cd9.web.app/",
+    },
+    {
         title: "CarvanaX",
         description:
             "A full-stack car dealership application with admin authentication, car inventory management (CRUD operations), and dynamic car listing features built with React, Node.js, MongoDB, and Vercel deployment.",
