@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 
 
 
+
 const HeroSectioiin = () => {
     const [animationData, setAnimationData] = useState(null);
     useEffect(() => {

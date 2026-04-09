@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SectionHeading from "../ui/SectionHeading";
+import FadeUp from "../fadeup/FadeUp";
 
 
 const TechStackSection = () => {
@@ -26,20 +27,22 @@ const TechStackSection = () => {
                 title="Tech Stack"
                 description="A collection of technologies I work with to build web applications and solve complex problems."
             />
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 mt-6">
-                {languages.map((lang, index) =>
-                    <div
-                        key={index}
-                        className="flex flex-col items-center justify-center p-4 md:p-6 bg-second rounded-3xl shadow-md hover:scale-105 cursor-grabbing transition duration-300">
-                        <Image
-                            src={lang.icon}
-                            width={500}
-                            height={500}
-                            alt="Picture of the author"
-                        />
-                    </div>
-                )}
-            </div>
+            <FadeUp>
+                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 mt-6">
+                    {languages.map((lang, index) =>
+                        <div
+                            key={index}
+                            className="flex flex-col items-center justify-center p-4 md:p-6 bg-second rounded-3xl shadow-md hover:scale-105 cursor-grabbing transition duration-300">
+                            <Image
+                                src={lang.icon}
+                                width={500}
+                                height={500}
+                                alt="Picture of the author"
+                            />
+                        </div>
+                    )}
+                </div>
+            </FadeUp>
         </div>
     );
 };

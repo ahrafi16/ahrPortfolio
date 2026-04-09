@@ -1,11 +1,23 @@
 "use client";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { Github, GraduationCap, Instagram, Linkedin, Mail, MapPin, Facebook, Send, MessageSquare, FileText, User } from "lucide-react";
+import { Github, GraduationCap, Instagram, Linkedin, Mail, MapPin, Facebook, Send, MessageSquare, FileText, User, Copy } from "lucide-react";
 import emailjs from '@emailjs/browser';
+import { useState } from "react";
 
 
-const page = () => {
+const Page = () => {
+
+    const [copied, setCopied] = useState(false);
+    const handleCopy = () => {
+        navigator.clipboard.writeText("anjumhossainrafi16@gmail.com");
+        setCopied(true);
+
+        setTimeout(() => {
+            setCopied(false);
+        }, 1500);
+    };
+
     const sendEmail = (e) => {
         e.preventDefault();
         emailjs.sendForm('service_7vunz6f', 'template_6e9274f', e.target, 'iA7fyh7grwsfZRLLw')
@@ -38,7 +50,25 @@ const page = () => {
                             </span>
                             <span>
                                 <p className="font-semibold">Email</p>
-                                <p className="text-sm text-second break-all">anjumhossainrafi16@gmail.com</p>
+                                <div className="flex items-center gap-2">
+                                    <p className="text-sm text-second break-all">
+                                        anjumhossainrafi16@gmail.com
+                                    </p>
+
+                                    <div className="relative group">
+                                        <button
+                                            onClick={handleCopy}
+                                            className="p-1 rounded-md hover:bg-gray-700 transition cursor-pointer"
+                                        >
+                                            <Copy size={16} />
+                                        </button>
+
+                                        {/* Tooltip */}
+                                        <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-xs bg-black text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
+                                            {copied ? "Copied!" : "Copy"}
+                                        </span>
+                                    </div>
+                                </div>
                             </span>
                         </div>
 
@@ -93,7 +123,7 @@ const page = () => {
                                 <User className="text-gray-400" size={18} />
                                 <input
                                     type="text"
-                                    placeholder="Anjum Hossain"
+                                    placeholder="Lionel Messi"
                                     className="w-full bg-transparent outline-none text-gray-300"
                                 />
                             </div>
@@ -154,4 +184,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;
