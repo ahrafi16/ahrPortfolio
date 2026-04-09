@@ -1,5 +1,23 @@
 export const projects = [
     {
+        title: "ZapShift - Parcel Delivery System",
+        description:
+            "A full-stack parcel delivery management system where users can create shipments, track parcels in real-time, and make secure online payments. Admins can manage riders, approve applications, assign riders to parcels, and monitor delivery status. Includes tracking system, rider assignment workflow, and role-based authentication. Built with modern technologies and responsive UI.",
+        technologies: [
+            "React",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "Firebase",
+            "JWT",
+            "Stripe",
+            "Tailwind CSS"
+        ],
+        photo: ["/p9.png", "/p9.png"],
+        githubLink: "https://github.com/ahrafi16/zap-shift-client",
+        liveDemo: "https://zap-shift-51ce3.web.app/",
+    },
+    {
         title: "CareerBridge",
         description:
             "A full-stack job portal system where admins can post jobs, manage applications, and update applicant status, while users can sign up, log in, and apply for jobs. Built with React, Node.js, Express, MongoDB, Firebase, JWT, and Tailwind CSS with a fully responsive design.",
