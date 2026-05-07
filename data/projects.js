@@ -1,5 +1,21 @@
 export const projects = [
     {
+        title: "Kidz-Lab - Toy Store E-Commerce",
+        description:
+            "A full-stack toy e-commerce storefront where users can browse products, view detailed listings with ratings and Q&A, and manage a persistent cart. Features dual authentication via credentials and Google OAuth, real-time discount pricing, role-based user management, and secure server-side cart operations. Built with Next.js 14 App Router and MongoDB using Server Actions — no separate REST API layer.",
+        technologies: [
+            "Next.js",
+            "MongoDB",
+            "NextAuth.js",
+            "Tailwind CSS",
+            "DaisyUI",
+            "bcryptjs",
+        ],
+        photo: ["/p10.png", "/p10.png"],
+        githubLink: "https://github.com/ahrafi16/Kidz-lab",
+        liveDemo: "https://kidz-lab.vercel.app/",
+    },
+    {
         title: "ZapShift - Parcel Delivery System",
         description:
             "A full-stack parcel delivery management system where users can create shipments, track parcels in real-time, and make secure online payments. Admins can manage riders, approve applications, assign riders to parcels, and monitor delivery status. Includes tracking system, rider assignment workflow, and role-based authentication. Built with modern technologies and responsive UI.",
