@@ -57,7 +57,7 @@ const page = () => {
             <SectionHeading
                 badge="About Me"
                 title="Know About Me"
-                description="A Computer Science student with a strong focus on both Frontend and Backend development. I&apos;m passionate about turning ideas into modern, dynamic, and user-focused web applications"
+                description="Computer Science graduate specializing in full-stack web development, focused on creating responsive, high-performance applications using modern web technologies."
             />
             <div className="flex flex-col md:flex-row items-center my-20 gap-10">
                 <FadeUp direction="right">
@@ -74,12 +74,19 @@ const page = () => {
                 <div className="flex-1">
                     <h2 className="text-2xl font-semibold">Who am I?</h2>
                     <p className="text-justify leading-7 mt-5 text-second">
-                        I&apos;m <span className="text-prim">Anjum Hossain</span> , a Computer Science student specializing in Web Development.
-                        My journey in programming began with a deep curiosity for solving complex problems, which inspired me to explore a variety of programming languages and modern technologies. <br /> <br /> Over time, I&apos;ve developed a strong passion for building web applications that are not only functional and efficient but also intuitive and user-centered.
-                        <br /> <br />
-                        I believe in continuous learning and constantly strive to stay updated with the latest trends and advancements in technology.
+                        I&apos;m <span className="text-prim">Anjum Hossain</span>, a Computer Science graduate and Full Stack Web Developer with a passion for building modern, responsive, and user-focused web applications.
 
-                        When I&apos;m not coding, you&apos;ll often find me exploring new tech tools, playing cricket, watching movies, or enjoying video games.
+                        <br /><br />
+
+                        My journey into software development began with a curiosity for solving real-world problems through technology. Since then, I&apos;ve gained hands-on experience developing full-stack applications using React, Next.js, Node.js, Express.js, MongoDB, and Tailwind CSS, while continuously expanding my knowledge of modern development practices.
+
+                        <br /><br />
+
+                        I enjoy transforming ideas into scalable digital solutions and writing clean, maintainable code that delivers meaningful user experiences. As a lifelong learner, I&apos;m always exploring new technologies and improving my skills to grow as a software engineer.
+
+                        <br /><br />
+
+                        Outside of coding, I enjoy exploring new AI tools and technologies, playing cricket, watching movies, and spending time with video games.
                     </p>
                 </div>
             </div>

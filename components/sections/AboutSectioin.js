@@ -37,8 +37,10 @@ const AboutSectioin = () => {
 
                         </span>
 
-                        <h2 className='text-xl font-semibold'>Professional Experience</h2>
-                        <p className='text-second'>Experienced in building fast, modern, and responsive web applications using React.js, Next.js, and Laravel.</p>
+                        <h2 className='text-xl font-semibold'>Software Engineering</h2>
+                        <p className='text-second'>
+                            Passionate about developing scalable, maintainable, and user-focused applications while following modern development practices and clean code principles.
+                        </p>
                     </div>
                 </div>
             </FadeUp>

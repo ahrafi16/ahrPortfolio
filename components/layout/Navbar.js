@@ -30,7 +30,7 @@ const Navbar = () => {
                 <nav className="hidden md:flex items-center gap-6">
                     {navItems.map((item, index) => {
                         const isActive = pathname === item.link;
-                        
+
                         // Handle external links (like PDF resume)
                         if (item.external) {
                             return (
@@ -45,7 +45,7 @@ const Navbar = () => {
                                 </a>
                             );
                         }
-                        
+
                         return (
                             <Link
                                 key={index}
@@ -56,6 +56,7 @@ const Navbar = () => {
                             </Link>
                         );
                     })}
+
                 </nav>
 
                 {/* Mobile Menu Button */}
@@ -108,7 +109,7 @@ const Navbar = () => {
                                         </a>
                                     );
                                 }
-                                
+
                                 return (
                                     <Link
                                         key={index}

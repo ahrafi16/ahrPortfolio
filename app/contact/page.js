@@ -1,7 +1,20 @@
 "use client";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { Github, GraduationCap, Instagram, Linkedin, Mail, MapPin, Facebook, Send, MessageSquare, FileText, User, Copy } from "lucide-react";
+import {
+    Github,
+    Linkedin,
+    Instagram,
+    Facebook,
+    MessageCircle,
+    Send,
+    Mail,
+    Copy,
+    MapPin,
+    User,
+    FileText,
+    MessageSquare,
+} from "lucide-react";
 import emailjs from '@emailjs/browser';
 import { useState } from "react";
 
@@ -28,6 +41,38 @@ const Page = () => {
                 alert("Failed to send message, please try again. Error: " + error.text);
             });
     }
+    const socialLinks = [
+        {
+            name: "GitHub",
+            icon: Github,
+            url: "https://github.com/ahrafi16",
+        },
+        {
+            name: "LinkedIn",
+            icon: Linkedin,
+            url: "https://www.linkedin.com/in/anjum-hossain-519a192b2/",
+        },
+        {
+            name: "WhatsApp",
+            icon: MessageCircle,
+            url: "https://wa.me/8801700610483",
+        },
+        {
+            name: "Telegram",
+            icon: Send,
+            url: "https://t.me/anjumhossain",
+        },
+        {
+            name: "Instagram",
+            icon: Instagram,
+            url: "https://www.instagram.com/anjum.soothes/",
+        },
+        {
+            name: "Facebook",
+            icon: Facebook,
+            url: "https://www.facebook.com/anjumhossain.rafi/",
+        },
+    ];
     return (
         <div className="min-h-screen pt-40">
             <SectionHeading
@@ -85,20 +130,25 @@ const Page = () => {
 
                         {/* Social Media */}
                         <div className="mt-6">
-                            <p className="text-prim font-semibold">Social Media</p>
-                            <div className="flex items-center gap-4 mt-2 text-gray-400">
-                                <a className="bg-second/10 p-2 rounded-full hover:text-prim transition-colors" href="https://github.com/ahrafi16" target="_blank">
-                                    <Github />
-                                </a>
-                                <a className="bg-second/10 p-2 rounded-full hover:text-prim transition-colors" href="https://www.linkedin.com/in/anjum-hossain-519a192b2/" target="_blank">
-                                    <Linkedin />
-                                </a>
-                                <a className="bg-second/10 p-2 rounded-full hover:text-prim transition-colors" href="https://www.instagram.com/rafianjumhossain/" target="_blank">
-                                    <Instagram />
-                                </a>
-                                <a className="bg-second/10 p-2 rounded-full hover:text-prim transition-colors" href="https://www.facebook.com/anjumhossain.rafi/" target="_blank">
-                                    <Facebook />
-                                </a>
+                            <p className="text-prim font-semibold">Connect With Me</p>
+
+                            <div className="flex items-center gap-4 mt-2 text-gray-400 flex-wrap">
+                                {socialLinks.map((social) => {
+                                    const Icon = social.icon;
+
+                                    return (
+                                        <a
+                                            key={social.name}
+                                            href={social.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label={social.name}
+                                            className="bg-second/10 p-2 rounded-full hover:text-prim transition-colors"
+                                        >
+                                            <Icon size={20} />
+                                        </a>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
