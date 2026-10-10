@@ -1,13 +1,14 @@
 import React from 'react';
 import SectionHeading from "@/components/ui/SectionHeading";
-import { projects } from '@/data/projects';
+import { getProjects } from '@/app/lib/getProjects';
 import ProjectCard from '../ui/ProjectCard';
 import Button from '../ui/Button';
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import FadeUp from '../fadeup/FadeUp';
 
-const ProjectSection = () => {
+const ProjectSection = async () => {
+    const projects = await getProjects();
     const featuredProjects = projects.slice(0, 3);
     return (
         <div className='flex flex-col gap-5 items-center'>
@@ -18,7 +19,7 @@ const ProjectSection = () => {
             />
             <FadeUp>
                 <div className='grid grid-cols-1 my-20 md:grid-cols-3 gap-10'>
-                    {featuredProjects.map((p, i) => <ProjectCard key={i} project={p} />)}
+                    {featuredProjects.map((p, i) => <ProjectCard key={p._id ?? i} project={p} />)}
                 </div>
             </FadeUp>
             <Link href="/projects">
